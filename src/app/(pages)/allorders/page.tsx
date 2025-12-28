@@ -44,7 +44,7 @@ export default function AllUserOrders() {
 
   return (
     <>{ loading?<Loading />:
-      !orders ?
+      orders.length== 0 ?
         <div className='flex justify-center items-center min-h-[50vh]'>
           <h1 className='text-center'>No orders added yet :(</h1>
         </div>
