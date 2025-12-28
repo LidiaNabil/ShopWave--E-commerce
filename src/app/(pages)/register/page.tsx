@@ -77,7 +77,7 @@ export default function Register() {
       rePassword: values.rePassword,
       phone: values.phone,
     }
-          let res=await fetch(`${process.env.NEXT_PUBLIC_API_URL}env/auth/signup`,
+          let res=await fetch(`${process.env.NEXT_PUBLIC_API_URL}/auth/signup`,
           {
             method: 'POST',
             body: JSON.stringify(userData),

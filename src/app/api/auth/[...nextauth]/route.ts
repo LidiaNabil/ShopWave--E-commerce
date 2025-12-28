@@ -11,7 +11,7 @@ const handler = NextAuth({
       password: {}
     },
     authorize: async (credentials)=> {
-      const res = await fetch("https://ecommerce.routemisr.com/api/v1/auth/signin", {
+      const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/auth/signin`, {
         method: 'POST',
           body: JSON.stringify({
               email: credentials?.email,
