@@ -94,15 +94,15 @@ export default function Checkout({ cartId }: { cartId: string }) {
         <div className="grid gap-4">
           <div className="grid gap-2">
             <Label>City</Label>
-            <Input ref={cityInput} />
+            <Input ref={cityInput} className="w-full"/>
           </div>
           <div className="grid gap-2">
             <Label>Details</Label>
-            <Input ref={detailsInput} />
+            <Input ref={detailsInput} className="w-full" />
           </div>
           <div className="grid gap-2">
             <Label>Phone</Label>
-            <Input ref={phoneInput} />
+            <Input ref={phoneInput} className="w-full"/>
           </div>
         </div>
         <DialogFooter>
