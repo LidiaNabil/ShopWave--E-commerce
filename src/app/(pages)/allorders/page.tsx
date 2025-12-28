@@ -44,7 +44,12 @@ export default function AllUserOrders() {
 
   return (
     <>{ loading?<Loading />:
-   <div className="max-w-5xl mx-auto p-6 space-y-6">
+      !orders ?
+        <div className='flex justify-center items-center min-h-[50vh]'>
+          <h1 className='text-center'>No orders added yet :(</h1>
+        </div>
+        :
+        <div className="max-w-5xl mx-auto p-6 space-y-6">
       <h1 className="text-3xl font-bold">All Orders</h1>
       {orders.map((order) => (
         <Card
