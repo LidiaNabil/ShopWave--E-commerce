@@ -3,7 +3,7 @@ import { getUserToken } from "@/app/Helpers/getuserToken"
 
 export async function checkoutSessionAction(shippingAddress:{},cartId:string) {
      const token =await getUserToken()
-       let res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/orders/checkout-session/${cartId}?url=${process.env.NEXT_URL}`,
+       let res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/orders/checkout-session/${cartId}?url=${process.env.NEXT_PUBLIC_BASE_URL}`,
           {
             method: 'POST',
             body:JSON.stringify({shippingAddress}),
