@@ -24,7 +24,7 @@ export default function WishContextProvider({ children }: { children: ReactNode 
     const [loading, setLoading] = useState(false)
     async function getUserWish() {
         setLoading(true)
-        let res = await fetch('http://localhost:3000/api/get-wishlist')
+        let res = await fetch('/api/get-wishlist')
         let data: WishResponse = await res.json()
         if (data.status == 'success') setUserWish(data)
         setLoading(false)
