@@ -76,6 +76,9 @@ export default function Checkout({ cartId }: { cartId: string }) {
     if (data.status === "success") {
       window.location.href = data.session.url
     }
+    else {
+    toast.error("Checkout failed ", data)
+  }
     setCheckoutLoading(false)
   }
 
